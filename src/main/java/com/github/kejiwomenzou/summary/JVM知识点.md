@@ -54,37 +54,37 @@
       * 4.对象在新生代经历过-XX:MaxTenuringThreshold = <N>次GC后未被回收直接进入老年代（还有一种情况是对象过大直接进入老年代，放不下触发Old GC）
       * 5.老年代不足时先触发老年代GC（Major GC/Old GC），GC后不足以把对象入到老年代则OOM。 
   
-  * **方法区**
+* **方法区**
     
-    * 就HotSpot而言，方法区叫做非堆（Non-Heap），是独立于Java堆的内存空间，该区域**所有线程共享**，空间区域大小可通过参数配置。
+  * 就HotSpot而言，方法区叫做非堆（Non-Heap），是独立于Java堆的内存空间，该区域**所有线程共享**，空间区域大小可通过参数配置。
   
-    * **方法区的内部结构**：    
-      * 类型信息（如类Class、接口Interface、枚举Enum、注解Annotation类）： 包括修饰符、直接父类的有效名称、全限定名、类的直接接口组成的列表
-      * 域信息： 包括域名称、域类型、域修饰符
-      * 方法信息：包括名称、返回值、参数个数及类型、修饰符、方法字节码、操作数栈、局部变量表及大小、异常表
-      * 编译器编译后的代码缓存
-      * 全局常量：被static final修饰且在编译期就确定了的值
-      * 静态变量
+  * **方法区的内部结构**：    
+    * 类型信息（如类Class、接口Interface、枚举Enum、注解Annotation类）： 包括修饰符、直接父类的有效名称、全限定名、类的直接接口组成的列表
+    * 域信息： 包括域名称、域类型、域修饰符
+    * 方法信息：包括名称、返回值、参数个数及类型、修饰符、方法字节码、操作数栈、局部变量表及大小、异常表
+    * 编译器编译后的代码缓存
+    * 全局常量：被static final修饰且在编译期就确定了的值
+    * 静态变量
 
-    * 不同版本的方法区：
-      * jdk1.7及以前： **永久代（Permanent Generation）**
-        * -XX:PermSize=<N> 初始永久代空间大小设置，默认20.75m
-        * -XX:MaxPermSize=<N> 永久代最大空间大小设置， 32位默认64m， 64位置默认82m
+  * 不同版本的方法区：
+    * jdk1.7及以前： **永久代（Permanent Generation）**
+      * -XX:PermSize=<N> 初始永久代空间大小设置，默认20.75m
+      * -XX:MaxPermSize=<N> 永久代最大空间大小设置， 32位默认64m， 64位置默认82m
         
-      * jdk1.8及以后： **元空间（Meta Space）**，元空间使用本地内存。
-        * -XX:MetaSpaceSize=<N> 初始元空间大小设置
-        * -XX:MaxMetaSpaceSize=<N> 最大元空间大小设置
-        * 默认值依赖于平台，不指定大小元空间可能会耗尽系统内存，触发OOM。-XX:MetaSpaceSize有可重置的水位线，超过水位线会触发Full GC。
+    * jdk1.8及以后： **元空间（Meta Space）**，元空间使用本地内存。
+      * -XX:MetaSpaceSize=<N> 初始元空间大小设置
+      * -XX:MaxMetaSpaceSize=<N> 最大元空间大小设置
+      * 默认值依赖于平台，不指定大小元空间可能会耗尽系统内存，触发OOM。-XX:MetaSpaceSize有可重置的水位线，超过水位线会触发Full GC。
     
-    * HotSpot方法区的变化：
-      * jdk1.6及以前：叫永久代（Permanent Generation）， **运行时常量池**（**字符串常量池StringTable运行时常量池中**） 和 **静态变量**在永久代中
-      * jdk1.7：叫永久代（Permanent Generation），**运行时常量池**在永久代中， **静态变量**和**字符串常量池StringTable**在**堆**中
-      * jdk1.8：叫元空间（Meta Space），使用**本地内存**，**运行时常量池**在元空间中，**静态变量**和**字符串常量池StringTable**在**堆**中
+  * HotSpot方法区的变化：
+    * jdk1.6及以前：叫永久代（Permanent Generation）， **运行时常量池**（**字符串常量池StringTable运行时常量池中**） 和 **静态变量**在永久代中
+    * jdk1.7：叫永久代（Permanent Generation），**运行时常量池**在永久代中， **静态变量**和**字符串常量池StringTable**在**堆**中
+    * jdk1.8：叫元空间（Meta Space），使用**本地内存**，**运行时常量池**在元空间中，**静态变量**和**字符串常量池StringTable**在**堆**中
 
-    * 方法区的垃圾回收：
-      * 主要回收**常量池中不被引用的常量**和**类型信息**（可以通过-Xnoclassgc来控制），类型信息回收很严格： 该类的对象没了 + 加载该类的类加载器没了 + 该的`java.lang.Class`对象没了。
-      * 注：类加载和卸载可以用 -XX:+TraceClassLoading 和 -XX:-TraceClassUnLoading来观察
+  * 方法区的垃圾回收：
+    * 主要回收**常量池中不被引用的常量**和**类型信息**（可以通过-Xnoclassgc来控制），类型信息回收很严格： 该类的对象没了 + 加载该类的类加载器没了 + 该的`java.lang.Class`对象没了。
+    * 注：类加载和卸载可以用 -XX:+TraceClassLoading 和 -XX:-TraceClassUnLoading来观察
  
-  * **本地方法区**
-  * **程序计数器**
-  * **虚拟机栈**
+* **本地方法区**
+* **程序计数器**
+* **虚拟机栈**
