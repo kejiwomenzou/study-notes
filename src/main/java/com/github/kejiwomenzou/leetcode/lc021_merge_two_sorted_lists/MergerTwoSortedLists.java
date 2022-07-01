@@ -1,6 +1,6 @@
-package com.github.kejiwomenzou.leetcode_top.linked_list.lc021_merge_two_sorted_lists;
+package com.github.kejiwomenzou.leetcode.lc021_merge_two_sorted_lists;
 
-import com.github.kejiwomenzou.leetcode_top.linked_list.common.ListNode;
+import com.github.kejiwomenzou.leetcode.linked_list.common.ListNode;
 
 /**
  * https://leetcode.cn/problems/merge-two-sorted-lists/
