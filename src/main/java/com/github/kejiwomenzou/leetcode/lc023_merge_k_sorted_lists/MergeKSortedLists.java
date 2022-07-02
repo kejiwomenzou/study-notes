@@ -1,6 +1,6 @@
-package com.github.kejiwomenzou.leetcode_top.linked_list.lc023_merge_k_sorted_lists;
+package com.github.kejiwomenzou.leetcode.lc023_merge_k_sorted_lists;
 
-import com.github.kejiwomenzou.leetcode_top.linked_list.common.ListNode;
+import com.github.kejiwomenzou.leetcode.linked_list.common.ListNode;
 
 import java.util.ArrayList;
 import java.util.Collections;

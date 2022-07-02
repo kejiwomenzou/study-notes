@@ -1,4 +1,4 @@
-package com.github.kejiwomenzou.leetcode_top.linked_list.common;
+package com.github.kejiwomenzou.leetcode.linked_list.common;
 
 public class ListNode {
 
