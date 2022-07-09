@@ -7,7 +7,7 @@
 * **ThreadLocal原理**
   * 关键点："线程封闭"、Thread、ThreadLocal、ThreadLocalMap关联关系、内存泄露、实现原理
 
-* **从StringBuilder和StringBuffer*
+* **从StringBuilder和StringBuffer**
   * 字符串常量池在和JDK版本中的差异
 
 * **HashMap/ConcurrentHashMap实现细节**
@@ -28,7 +28,7 @@
   * 关键点1：Throwable接口，Exception和Error区别， 异常分类：CheckedException和UnCheckedException 
   * 关键点2：业务中异常的最佳实践
 
-* Integer/Short/Long等类的缓存池
+* **Integer/Short/Long等类的缓存池**
   * 非常规操作：反射操作时会直接改掉缓存池
   
 ## Java并发
@@ -68,6 +68,8 @@
     * 2.压测，根据预估业务接口的QPS及机器配置来确定corePoolSize和maximumPoolSize， 顶得住并发调整corePoolSize，顶不住调整队列大小，
     * 3.队列最好使用队列，留好一定的阀值，做好监控，拒绝策略根据业务场景抛弃或日志持久化
   * 关键点4：`Executors.newFixedThreadPool(int nThreads)、newCachedThreadPool()、newScheduledThreadPool(int corePoolSize)、newSingleThreadExecutor()`
+
+* **实现生产者消费者模式**
 
 * **Thread类**
   * Thread线程状态及状态的转换： NEW、RUNNABLE、WAITING/TIME_WAITING、BLOCK、TERMINATED
