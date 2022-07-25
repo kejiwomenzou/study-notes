@@ -1,0 +1,3 @@
+grizzly=com.github.kejiwomenzou.dubbo.spi.adaptive.GrizzlyTransport
+netty=com.github.kejiwomenzou.dubbo.spi.adaptive.NettyTransport
+unknow=com.github.kejiwomenzou.dubbo.spi.adaptive.UnknowTransport

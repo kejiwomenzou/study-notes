@@ -1,0 +1,5 @@
+wrapper=com.github.kejiwomenzou.dubbo.spi.wrapper.WrapperFilter
+auth=com.github.kejiwomenzou.dubbo.spi.activate.AuthFilter
+blackList=com.github.kejiwomenzou.dubbo.spi.activate.BackListFilter
+cros=com.github.kejiwomenzou.dubbo.spi.activate.CrosFilter
+order=com.github.kejiwomenzou.dubbo.spi.activate.OrderFilter

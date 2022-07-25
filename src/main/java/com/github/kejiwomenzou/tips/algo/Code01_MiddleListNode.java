@@ -20,7 +20,7 @@ public class Code01_MiddleListNode {
 
         /**
          *  链表奇数节点时，slow最终停在中间节点
-         *  偶数节点返回两个中间节点的【前】一个节点 因为这样判断slow和fast会多往后跳一下
+         *  偶数节点返回两个中间节点的【后】一个节点 因为这样判断slow和fast会多往后跳一下
          */
         while (fast != null && fast.next != null) { //注意这行区别
             slow = slow.next;
@@ -29,7 +29,7 @@ public class Code01_MiddleListNode {
 
         /**
          *  链表奇数节点时，slow最终停在中间节点
-         *  偶数节点返回两个中间节点的【后】一个节点
+         *  偶数节点返回两个中间节点的【前】一个节点
          */
 //        while (fast.next != null && fast.next.next != null) { 注意这行区别
 //            slow = slow.next;
