@@ -1,6 +1,6 @@
-package com.github.kejiwomenzou.leetcode.lc724_find_pivot_index;
+package com.github.kejiwomenzou.leetcode.array;
 
-public class FindPivotIndex {
+public class LC_0724_FindPivotIndex {
 
     public int pivotIndex(int[] nums) {
 

@@ -1,11 +1,11 @@
-package com.github.kejiwomenzou.leetcode.lc021_merge_two_sorted_lists;
+package com.github.kejiwomenzou.leetcode;
 
 import com.github.kejiwomenzou.leetcode.linked_list.common.ListNode;
 
 /**
  * https://leetcode.cn/problems/merge-two-sorted-lists/
  */
-public class MergerTwoSortedLists {
+public class LC_0021_MergeTwoSortedLists {
 
     /**
      * 利用虚拟节点，遍历拼接

@@ -1,4 +1,4 @@
-package com.github.kejiwomenzou.leetcode.lc083_remove_duplicates_from_sorted_list;
+package com.github.kejiwomenzou.leetcode.linked_list;
 
 import com.github.kejiwomenzou.leetcode.linked_list.common.ListNode;
 
@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class RemoveDuplicatesFromSortedList {
+public class LC_0083_RemoveDuplicatesFromSortedList {
 
 
     /**

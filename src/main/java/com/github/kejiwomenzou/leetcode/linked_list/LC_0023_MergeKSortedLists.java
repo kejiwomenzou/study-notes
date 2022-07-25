@@ -1,4 +1,4 @@
-package com.github.kejiwomenzou.leetcode.lc023_merge_k_sorted_lists;
+package com.github.kejiwomenzou.leetcode;
 
 import com.github.kejiwomenzou.leetcode.linked_list.common.ListNode;
 
@@ -9,7 +9,7 @@ import java.util.List;
 /**
  *  https://leetcode.cn/problems/merge-k-sorted-lists/submissions/
  */
-public class MergeKSortedLists {
+public class LC_0023_MergeKSortedLists {
 
     /**
      * 两两有序链表合并

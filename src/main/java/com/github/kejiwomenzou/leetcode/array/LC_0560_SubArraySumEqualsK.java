@@ -1,10 +1,11 @@
-package com.github.kejiwomenzou.leetcode.lc560_subarray_sum_equals_k;
+package com.github.kejiwomenzou.leetcode.array;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * https://leetcode.cn/problems/subarray-sum-equals-k/
+ * 560. 和为 K 的子数组
  *
  * nums[]：原数组， prefixSum[]:前缀和数组
  *
@@ -17,7 +18,7 @@ import java.util.Map;
  * => 利用map记录当前j位置前缀和， 减去k, 能得到i位置前缀和
  * => 所以用map的key来记录之前遍历的i位置前缀和，value为次数， for循环内能通过preSum得到当前j位置前缀, k已知
  */
-public class SubArraySumEqualsK {
+public class LC_0560_SubArraySumEqualsK {
 
     /**
      * 前缀和 + hashMap优化

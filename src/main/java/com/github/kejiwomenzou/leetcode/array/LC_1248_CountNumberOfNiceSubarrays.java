@@ -1,12 +1,13 @@
-package com.github.kejiwomenzou.leetcode.lc1248_count_number_of_nice_subarrays;
+package com.github.kejiwomenzou.leetcode.array;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * https://leetcode.cn/problems/count-number-of-nice-subarrays/
+ * 1248. 统计「优美子数组」
  */
-public class CountNumberOfNiceSubarrays {
+public class LC_1248_CountNumberOfNiceSubarrays {
 
     public int numberOfSubarrays(int[] nums, int k) {
 

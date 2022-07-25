@@ -1,4 +1,4 @@
-package com.github.kejiwomenzou.leetcode.lc061_rotate_list;
+package com.github.kejiwomenzou.leetcode;
 
 import com.github.kejiwomenzou.leetcode.linked_list.common.ListNode;
 
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * https://leetcode.cn/problems/rotate-list/
  */
-public class RotateList {
+public class LC_0061_RotateList {
 
     /**
      * 思路： 将链表倒数K个节点向右移动， 将节点收集起来， k位置将链表分成两部分，先收集后面部分，再收集链表前一部分
